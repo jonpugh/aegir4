@@ -1,0 +1,20 @@
+server:
+  list:
+    link: back to server list
+    headline: Available servers
+    empty: No servers found
+  new:
+    link: create new server
+    headline: Create new server
+    submit: add server
+  edit:
+    link: edit
+    headline: Edit server %id%
+    submit: update server
+  remove:
+    link: remove
+  offset: offset
+  limit: limit
+api:
+  doc:
+    link: API documentation
