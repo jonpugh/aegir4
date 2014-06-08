@@ -1,8 +1,8 @@
 <?php
 
-namespace Aegir\Provision\Server;
+namespace Aegir\Provision\Model;
 
-class Project {
+class Server {
 
   /**
    * @var int

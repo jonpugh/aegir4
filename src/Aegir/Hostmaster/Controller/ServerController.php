@@ -3,8 +3,8 @@
 namespace Aegir\Hostmaster\Controller;
 
 use Aegir\Hostmaster\Form\ServerType;
-use Aegir\Provision\Server;
-use Aegir\Provision\ServerCollection;
+use Aegir\Provision\Model\Server;
+use Aegir\Provision\Model\ServerCollection;
 
 use FOS\RestBundle\Util\Codes;
 
