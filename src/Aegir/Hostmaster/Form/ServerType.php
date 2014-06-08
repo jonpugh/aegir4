@@ -10,7 +10,7 @@ class ServerType extends AbstractType
 {
   public function buildForm(FormBuilderInterface $builder, array $options)
   {
-    $builder->add('hostname', 'textfield', array(
+    $builder->add('hostname', 'text', array(
       'description' => 'The hostname of the server. Must resolve to the IP addresses.',
     ));
 
