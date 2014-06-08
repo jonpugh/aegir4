@@ -1,18 +1,18 @@
-{% extends "AcmeDemoBundle::layout.html.twig" %}
+{% extends "AegirHostmaster::layout.html.twig" %}
 
-{% block title "Symfony - Notes" %}
+{% block title "Aegir - New Server" %}
 
 {% block content_header '' %}
 
 {% block content %}
-    <h1 class="title">{{ 'note.new.headline'|trans({}, 'AcmeDemoBundle') }}</h1>
+    <h1 class="title">{{ 'server.new.headline'|trans({}, 'AegirHostmaster') }}</h1>
 
     {%  if (form is defined) %}
-    <form action="{{ url('post_notes') }}" method="POST" {{ form_enctype(form) }}>
+    <form action="{{ url('post_servers') }}" method="POST" {{ form_enctype(form) }}>
 
         {{ form_widget(form) }}
 
-        <input type="submit" value="{% trans from 'AcmeDemoBundle' %}note.new.submit{% endtrans %}">
+        <input type="submit" value="{% trans from 'AegirHostmaster' %}server.new.submit{% endtrans %}">
     </form>
     {% endif %}
 

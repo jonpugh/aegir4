@@ -2,10 +2,10 @@
 
 {% block head %}
     <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" href="{{ asset('bundles/acmedemo/css/demo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/aegirhostmaster/css/demo.css') }}" />
 {% endblock %}
 
-{% block title 'Demo Bundle' %}
+{% block title 'Aegir' %}
 
 {% block body %}
     {% for flashMessage in app.session.flashbag.get('notice') %}
@@ -28,7 +28,7 @@
         {% block content %}{% endblock %}
 
         <p>
-            <a href="{{ path('nelmio_api_doc_index') }}">{{ 'api.doc.link'|trans({}, 'AcmeDemoBundle') }}</a>
+            <a href="{{ path('nelmio_api_doc_index') }}">{{ 'api.doc.link'|trans({}, 'AegirHostmaster') }}</a>
         </p>
     </div>
 
