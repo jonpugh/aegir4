@@ -1,0 +1,11 @@
+
+_server:
+    resource: "@AegirHostmaster/Controller/ServerController.php"
+    type:     rest
+
+_welcome:
+    pattern:  /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: get_servers
+        permanent: true # this for 301
