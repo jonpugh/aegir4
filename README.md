@@ -1,3 +1,24 @@
+Aegir 4 Prototype
+=================
+
+This is a prototype of what Aegir 4 could look like.
+
+To get this up and running:
+
+1. `git clone git@github.com:jonpugh/aegir4.git'
+2. `cd aegir4'
+3. `composer update`
+4. `app/console server:run`
+5. Open localhost:8000 in a browser.
+
+This is just a simple proof of concept that allows you to create, edit and delete servers.  Nothing else happens yet.
+
+It is built upon Symfony REST edition which means that this is already a RESTful API!
+
+
+COMMENTS WELCOME!
+
+
 Symfony REST Edition
 ========================
 
