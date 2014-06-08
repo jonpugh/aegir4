@@ -5,8 +5,8 @@ This is a prototype of what Aegir 4 could look like.
 
 To get this up and running:
 
-1. `git clone git@github.com:jonpugh/aegir4.git'
-2. `cd aegir4'
+1. `git clone git@github.com:jonpugh/aegir4.git`
+2. `cd aegir4`
 3. `composer update`
 4. `app/console server:run`
 5. Open localhost:8000 in a browser.
