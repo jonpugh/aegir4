@@ -5,6 +5,16 @@ namespace Aegir\Provision\Server;
 class Project {
 
   /**
+   * @var int
+   */
+  public $id;
+
+  /**
+   * @var string
+   */
+  public $secret;
+
+  /**
    * @var string
    */
   public $hostname;
