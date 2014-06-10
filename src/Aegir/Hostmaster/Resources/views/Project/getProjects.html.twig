@@ -14,7 +14,7 @@
     <ul id="note-list">
         {% for id, project in data.projects %}
         <li>
-            <a href="{{ path('get_project', {'id': id}) }}">{{ project.hostname }}</a>
+            <a href="{{ path('get_project', {'id': id}) }}">{{ project.name }}</a>
             [<a href="{{ path('edit_projects', {'id': id}) }}">{{ 'project.edit.link'|trans({}, 'AegirHostmaster') }}</a>]
             [<a href="{{ path('remove_projects', {'id': id}) }}">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a>]
         </li>
