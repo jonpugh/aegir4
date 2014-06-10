@@ -1,8 +1,8 @@
 {
-    "name": "gimler/symfony-rest-edition",
+    "name": "aegir/aegir4",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony REST Edition\" distribution",
+    "description": "The Aegir Project",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -25,7 +25,9 @@
         "liip/cache-control-bundle": "~1.0.5",
         "willdurand/hateoas-bundle": "0.2.*",
         "hautelook/templated-uri-bundle": "~1.0",
-        "willdurand/rest-extra-bundle": "~1.0"
+        "willdurand/rest-extra-bundle": "~1.0",
+
+        "cpliakas/git-wrapper": "~1.0"
     },
     "conflict": {
         "symfony/routing": "2.4.1"
