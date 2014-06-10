@@ -3,6 +3,10 @@ _server:
     resource: "@AegirHostmaster/Controller/ServerController.php"
     type:     rest
 
+_project:
+    resource: "@AegirHostmaster/Controller/ProjectController.php"
+    type:     rest
+
 _welcome:
     pattern:  /
     defaults:

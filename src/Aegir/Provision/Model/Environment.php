@@ -1,6 +1,6 @@
 <?php
 
-namespace Aegir\Provision\Environment;
+namespace Aegir\Provision\Model;
 
 class Environment {
 

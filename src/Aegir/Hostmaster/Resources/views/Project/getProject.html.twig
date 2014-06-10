@@ -1,0 +1,18 @@
+{% extends "AegirHostmaster::layout.html.twig" %}
+
+{% block title "Aegir - Project" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">Project #{{ id }}</h1>
+
+    <p>{{ project.hostname }}</p>
+    <p>
+        <a href="{{ path('get_projects') }}">{{ 'project.list.link'|trans({}, 'AegirHostmaster') }}</a> <br>
+        [<a href="{{ path('remove_projects', {'id': id}) }}">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a>]
+        [<a href="{{ path('edit_projects', {'id': id}) }}">{{ 'project.edit.link'|trans({}, 'AegirHostmaster') }}</a>]
+    </p>
+{% endblock %}
+
+{% set code = code(_self) %}

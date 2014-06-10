@@ -15,6 +15,23 @@ server:
     link: remove
   offset: offset
   limit: limit
+project:
+  list:
+    link: back to project list
+    headline: Available projects
+    empty: No projects found
+  new:
+    link: create new project
+    headline: Create new project
+    submit: add project
+  edit:
+    link: edit
+    headline: Edit project %id%
+    submit: update project
+  remove:
+    link: remove
+  offset: offset
+  limit: limit
 api:
   doc:
     link: API documentation

@@ -1,6 +1,6 @@
 <?php
 
-namespace Aegir\Provision\Project;
+namespace Aegir\Provision\Model;
 
 class Project {
 

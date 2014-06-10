@@ -1,0 +1,30 @@
+{% extends "AegirHostmaster::layout.html.twig" %}
+
+{% block title "Aegir - Projects" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">{{ 'project.list.headline'|trans({}, 'AegirHostmaster') }}</h1>
+
+    <p>
+        {{ 'project.offset'|trans({}, 'AegirHostmaster') }}: {{ data.offset ?: '-' }}, {{ 'project.limit'|trans({}, 'AegirHostmaster') }}: {{ data.limit }}
+    </p>
+
+    <ul id="note-list">
+        {% for id, project in data.projects %}
+        <li>
+            <a href="{{ path('get_project', {'id': id}) }}">{{ project.hostname }}</a>
+            [<a href="{{ path('edit_projects', {'id': id}) }}">{{ 'project.edit.link'|trans({}, 'AegirHostmaster') }}</a>]
+            [<a href="{{ path('remove_projects', {'id': id}) }}">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a>]
+        </li>
+        {% else %}
+        <li>{{ 'project.list.empty'|trans({}, 'AegirHostmaster') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('new_project') }}">{{ 'project.new.link'|trans({}, 'AegirHostmaster') }}</a>
+    </p>
+{% endblock %}
+
+{% set code = code(_self) %}

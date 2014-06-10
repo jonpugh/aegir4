@@ -1,0 +1,21 @@
+{% extends "AegirHostmaster::layout.html.twig" %}
+
+{% block title "Aegir - New Project" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">{{ 'project.new.headline'|trans({}, 'AegirHostmaster') }}</h1>
+
+    {%  if (form is defined) %}
+    <form action="{{ url('post_projects') }}" method="POST" {{ form_enctype(form) }}>
+
+        {{ form_widget(form) }}
+
+        <input type="submit" value="{% trans from 'AegirHostmaster' %}project.new.submit{% endtrans %}">
+    </form>
+    {% endif %}
+
+{% endblock %}
+
+{% set code = code(_self) %}
