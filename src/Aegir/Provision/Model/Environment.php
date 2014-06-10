@@ -16,4 +16,9 @@ class Environment {
    */
   public $project;
 
+  /**
+   * @var string
+   * Server the server this environment should live on.
+   */
+  public $server;
 }
