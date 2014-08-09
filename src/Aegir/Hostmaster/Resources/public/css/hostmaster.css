@@ -14,3 +14,9 @@ body {
   padding: 10px;
   display: block;
 }
+
+#api-docs-link {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}

@@ -7,25 +7,31 @@
 
 {% block content %}
     <h1 class="title">{{ 'server.list.headline'|trans({}, 'AegirHostmaster') }}</h1>
-
-    <p>
-        {{ 'server.offset'|trans({}, 'AegirHostmaster') }}: {{ data.offset ?: '-' }}, {{ 'server.limit'|trans({}, 'AegirHostmaster') }}: {{ data.limit }}
-    </p>
-
-    <ul id="note-list">
+    <div class="row placeholders">
         {% for id, server in data.servers %}
-        <li>
-            <a href="{{ path('get_server', {'id': id}) }}">{{ server.hostname }}</a>
-            [<a href="{{ path('edit_servers', {'id': id}) }}">{{ 'server.edit.link'|trans({}, 'AegirHostmaster') }}</a>]
-            [<a href="{{ path('remove_servers', {'id': id}) }}">{{ 'server.remove.link'|trans({}, 'AegirHostmaster') }}</a>]
-        </li>
-        {% else %}
-        <li>{{ 'server.list.empty'|trans({}, 'AegirHostmaster') }}</li>
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="{{ path('get_server', {'id': id}) }}"><h3 class="panel-title">{{ server.hostname }}</h3></a>
+                </div>
+                <div class="panel-body">
+                    {{ server.ip_addresses }}
+                </div>
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="{{ path('edit_servers', {'id': id}) }}">{{ 'server.edit.link'|trans({}, 'AegirHostmaster') }}</a></li>
+
+                    {#<a href="{{ path('remove_servers', {'id': id}) }}">{{ 'server.remove.link'|trans({}, 'AegirHostmaster') }}</a>#}
+                </ul>
+            </div>
+
+
+        </div>
         {% endfor %}
-    </ul>
-    <p>
-        <a href="{{ path('new_server') }}">{{ 'server.new.link'|trans({}, 'AegirHostmaster') }}</a>
-    </p>
+
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 placeholder add-project-button">
+            <a href="{{ path('new_server') }}" class="btn btn-lg btn-success"><i class="glyphicon glyphicon-plus"></i>{{ 'server.new.link'|trans({}, 'AegirHostmaster') }}</a>
+        </div>
+    </div>
 {% endblock %}
 
 {% set code = code(_self) %}

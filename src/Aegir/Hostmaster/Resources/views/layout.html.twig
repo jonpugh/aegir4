@@ -27,9 +27,6 @@
     <div class="block">
         {% block content %}{% endblock %}
 
-        <p>
-            <a href="{{ path('nelmio_api_doc_index') }}">{{ 'api.doc.link'|trans({}, 'AegirHostmaster') }}</a>
-        </p>
     </div>
 
     {#{% if code is defined %}#}
@@ -38,5 +35,8 @@
             {#<div class="symfony-content">{{ code|raw }}</div>#}
         {#</div>#}
     {#{% endif %}#}
+
+
 {% endblock %}
+
 
