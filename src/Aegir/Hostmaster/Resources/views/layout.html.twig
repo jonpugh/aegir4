@@ -1,13 +1,13 @@
-{% extends "TwigBundle::layout.html.twig" %}
+{% extends "AegirHostmaster::page.html.twig" %}
 
 {% block head %}
-    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" href="{{ asset('bundles/aegirhostmaster/css/demo.css') }}" />
 {% endblock %}
 
 {% block title 'Aegir' %}
 
 {% block body %}
+
+
     {% for flashMessage in app.session.flashbag.get('notice') %}
         <div class="flash-message">
             <em>Notice</em>: {{ flashMessage }}
@@ -39,3 +39,4 @@
         </div>
     {% endif %}
 {% endblock %}
+

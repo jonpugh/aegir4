@@ -1,6 +1,7 @@
 {% extends "AegirHostmaster::layout.html.twig" %}
 
 {% block title "Aegir - Projects" %}
+{% block menu_active_projects "active" %}
 
 {% block content_header '' %}
 
@@ -11,20 +12,28 @@
         {{ 'project.offset'|trans({}, 'AegirHostmaster') }}: {{ data.offset ?: '-' }}, {{ 'project.limit'|trans({}, 'AegirHostmaster') }}: {{ data.limit }}
     </p>
 
-    <ul id="note-list">
+
+
+    <div class="row placeholders">
         {% for id, project in data.projects %}
-        <li>
-            <a href="{{ path('get_project', {'id': id}) }}">{{ project.name }}</a>
-            [<a href="{{ path('edit_projects', {'id': id}) }}">{{ 'project.edit.link'|trans({}, 'AegirHostmaster') }}</a>]
-            [<a href="{{ path('remove_projects', {'id': id}) }}">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a>]
-        </li>
+        <div class="col-xs-6 col-sm-3 placeholder well">
+            <a href="{{ path('get_project', {'id': id}) }}">
+                <h4> {{ project.name }} </h4>
+                <div class="text-muted">{{ project.source_url }}</div>
+            </a>
+
+            <a href="{{ path('edit_projects', {'id': id}) }}" class="btn btn-default">{{ 'project.edit.link'|trans({}, 'AegirHostmaster') }}</a>
+            <a href="{{ path('remove_projects', {'id': id}) }}" class="btn btn-default">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a>
+
+        </div>
         {% else %}
-        <li>{{ 'project.list.empty'|trans({}, 'AegirHostmaster') }}</li>
+        {#<div class="col-xs-6 col-sm-3 placeholder">{{ 'project.list.empty'|trans({}, 'AegirHostmaster') }}</div>#}
+
+
         {% endfor %}
-    </ul>
-    <p>
-        <a href="{{ path('new_project') }}">{{ 'project.new.link'|trans({}, 'AegirHostmaster') }}</a>
-    </p>
+
+        <div class="col-xs-6 col-sm-3 placeholder"><a href="{{ path('new_project') }}">{{ 'project.new.link'|trans({}, 'AegirHostmaster') }}</a></div>
+    </div>
 {% endblock %}
 
 {% set code = code(_self) %}

@@ -25,7 +25,7 @@ project:
     headline: Create new project
     submit: add project
   edit:
-    link: edit
+    link: settings
     headline: Edit project %id%
     submit: update project
   remove:
