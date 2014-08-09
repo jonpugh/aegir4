@@ -8,22 +8,39 @@
 {% block content %}
     <h1 class="title">{{ 'project.list.headline'|trans({}, 'AegirHostmaster') }}</h1>
 
-    <p>
-        {{ 'project.offset'|trans({}, 'AegirHostmaster') }}: {{ data.offset ?: '-' }}, {{ 'project.limit'|trans({}, 'AegirHostmaster') }}: {{ data.limit }}
-    </p>
+    {#<p>#}
+        {#{{ 'project.offset'|trans({}, 'AegirHostmaster') }}: {{ data.offset ?: '-' }}, {{ 'project.limit'|trans({}, 'AegirHostmaster') }}: {{ data.limit }}#}
+    {#</p>#}
 
 
 
     <div class="row placeholders">
         {% for id, project in data.projects %}
-        <div class="col-xs-6 col-sm-3 placeholder well">
-            <a href="{{ path('get_project', {'id': id}) }}">
-                <h4> {{ project.name }} </h4>
-                <div class="text-muted">{{ project.source_url }}</div>
-            </a>
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="{{ path('get_project', {'id': id}) }}"><h3 class="panel-title">{{ project.name }}</h3></a>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group">
+                        <span class="input-group-addon icn"><i class="fa fa-code-fork"></i></span>
+                        <input type="text" class="form-control" value="{{ project.source_url }}">
+                    </div>
+                </div>
+                <ul class="nav nav-pills nav-justified">
+                    <li><a href="{{ path('edit_projects', {'id': id}) }}">{{ 'project.edit.link'|trans({}, 'AegirHostmaster') }}</a></li>
+                    {#<li><a href="{{ path('remove_projects', {'id': id}) }}">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a></li>#}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Environments <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Create an Environment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-            <a href="{{ path('edit_projects', {'id': id}) }}" class="btn btn-default">{{ 'project.edit.link'|trans({}, 'AegirHostmaster') }}</a>
-            <a href="{{ path('remove_projects', {'id': id}) }}" class="btn btn-default">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a>
 
         </div>
         {% else %}
@@ -32,8 +49,11 @@
 
         {% endfor %}
 
-        <div class="col-xs-6 col-sm-3 placeholder"><a href="{{ path('new_project') }}">{{ 'project.new.link'|trans({}, 'AegirHostmaster') }}</a></div>
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 placeholder add-project-button">
+                    <a href="{{ path('new_project') }}" class="btn btn-lg btn-success"><i class="glyphicon glyphicon-plus"></i>{{ 'project.new.link'|trans({}, 'AegirHostmaster') }}</a>
+        </div>
     </div>
+</div>
 {% endblock %}
 
 {% set code = code(_self) %}

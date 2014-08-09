@@ -1,7 +1,7 @@
 server:
   list:
     link: back to server list
-    headline: Available servers
+    headline: Servers
     empty: No servers found
   new:
     link: create new server
@@ -18,7 +18,7 @@ server:
 project:
   list:
     link: back to project list
-    headline: Available projects
+    headline: Projects
     empty: No projects found
   new:
     link: create new project
