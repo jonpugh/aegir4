@@ -20,3 +20,11 @@ body {
   bottom: 10px;
   left: 10px;
 }
+
+h1.title {
+  text-transform: Capitalize;
+}
+
+h1.title small {
+  text-transform: none;
+}

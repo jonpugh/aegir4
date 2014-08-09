@@ -1,4 +1,6 @@
 server:
+  label: server
+  label_plural: servers
   list:
     link: back to server list
     headline: Servers
@@ -16,6 +18,8 @@ server:
   offset: offset
   limit: limit
 project:
+  label: project
+  label_plural: projects
   list:
     link: back to project list
     headline: Projects

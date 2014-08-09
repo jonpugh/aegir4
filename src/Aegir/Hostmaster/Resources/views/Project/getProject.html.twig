@@ -6,9 +6,7 @@
 {% block content_header '' %}
 
 {% block content %}
-    <h1 class="title">Project #{{ id }}</h1>
-
-    <p>{{ project.name }}</p>
+    <h1 class="title">{{ 'project.label_plural'|trans({}, 'AegirHostmaster') }} <small>{{ project.name }}</small></h1>
     <p>
         <a href="{{ path('get_projects') }}">{{ 'project.list.link'|trans({}, 'AegirHostmaster') }}</a> <br>
         [<a href="{{ path('remove_projects', {'id': id}) }}">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a>]

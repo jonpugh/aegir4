@@ -6,7 +6,7 @@
 {% block content_header '' %}
 
 {% block content %}
-    <h1 class="title">Server #{{ id }}</h1>
+    <h1 class="title">{{ 'server.label_plural'|trans({}, 'AegirHostmaster') }} <small>{{ server.hostname }}</small></h1>
 
     <p>{{ server.hostname }}</p>
     <p>
