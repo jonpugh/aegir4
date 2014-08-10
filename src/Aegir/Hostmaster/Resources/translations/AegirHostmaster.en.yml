@@ -36,6 +36,14 @@ project:
     link: delete project
   offset: offset
   limit: limit
+
+environment:
+  label:
+    plural: environments
+    singular: environment
+  new:
+    link: create new environment
+
 api:
   doc:
     link: API documentation

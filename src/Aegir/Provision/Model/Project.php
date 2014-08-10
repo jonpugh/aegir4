@@ -27,5 +27,10 @@ class Project {
   public function __construct($name, $source_url) {
     $this->name = $name;
     $this->source_url = $source_url;
+
+    // Create dummy environments
+    $this->environments['dev'] = new Environment('dev', $name);
+    $this->environments['test'] = new Environment('test', $name);
+    $this->environments['live'] = new Environment('live', $name);
   }
 }
