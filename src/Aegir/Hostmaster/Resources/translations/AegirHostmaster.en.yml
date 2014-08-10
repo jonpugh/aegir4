@@ -14,7 +14,7 @@ server:
     headline: Edit server %id%
     submit: update server
   remove:
-    link: remove
+    link: delete server
   offset: offset
   limit: limit
 project:
@@ -33,7 +33,7 @@ project:
     headline: Edit project %id%
     submit: update project
   remove:
-    link: remove
+    link: delete project
   offset: offset
   limit: limit
 api:
