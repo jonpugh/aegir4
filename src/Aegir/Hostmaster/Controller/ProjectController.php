@@ -41,7 +41,7 @@ class ProjectController extends FOSRestController
    * )
    *
    * @Annotations\QueryParam(name="offset", requirements="\d+", nullable=true, description="Offset from which to start listing projects.")
-   * @Annotations\QueryParam(name="limit", requirements="\d+", default="5", description="How many projects to return.")
+   * @Annotations\QueryParam(name="limit", requirements="\d+", default="-1", description="How many projects to return.")
    *
    * @Annotations\View()
    *
