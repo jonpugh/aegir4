@@ -29,8 +29,8 @@ class Project {
     $this->source_url = $source_url;
 
     // Create dummy environments
-    $this->environments['dev'] = new Environment('dev', $name);
-    $this->environments['test'] = new Environment('test', $name);
-    $this->environments['live'] = new Environment('live', $name);
+    $this->environments['dev'] = new Environment('dev', $name, 'master');
+    $this->environments['test'] = new Environment('test', $name, 'r0.1.1');
+    $this->environments['live'] = new Environment('live', $name, 'r0.1.2');
   }
 }
