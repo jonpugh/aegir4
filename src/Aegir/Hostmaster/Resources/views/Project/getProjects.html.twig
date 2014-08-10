@@ -25,10 +25,14 @@
                     {#<li><a href="{{ path('remove_projects', {'id': id}) }}">{{ 'project.remove.link'|trans({}, 'AegirHostmaster') }}</a></li>#}
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            Environments <span class="caret"></span>
+                           {{ project.environments|length }} Environments <span class="caret"></span>
                         </a>
+
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Create an Environment</a></li>
+                            {% for id, environment in project.environments %}
+                              <li><a href="{{  environment.url }}">{{  environment.name }} <small class="text-muted">{{  environment.git_ref }}</small></a></li>
+                            {% endfor %}
+                            <li><a href="#"><i class="glyphicon glyphicon-plus"></i> {{ 'environment.new.link'|trans({}, 'AegirHostmaster') }}</a></li>
                         </ul>
                     </li>
                 </ul>
