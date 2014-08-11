@@ -20,8 +20,7 @@ class Server {
   public $hostname;
 
   /**
-   * @var string
-   * Git repo URL, Makefile URL, or Composer.json URL?
+   * @var array
    */
   public $ip_addresses;
 
@@ -35,7 +34,7 @@ class Server {
    */
   public function __construct($hostname, $ip_addresses, $services) {
     $this->hostname = $hostname;
-    $this->ip_addresses = $ip_addresses;
+    $this->ip_addresses[] = $ip_addresses;
     $this->services = $services;
   }
 }
