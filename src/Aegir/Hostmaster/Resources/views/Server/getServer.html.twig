@@ -9,6 +9,7 @@
     <h1 class="title">{{ 'server.label'|trans({}, 'AegirHostmaster') }} <small>{{ server.hostname }}</small></h1>
 
     <p>{{ server.hostname }}</p>
+    <p>{{ server.ip_addresses }}</p>
     <p>
         <a href="{{ path('get_servers') }}">{{ 'server.list.link'|trans({}, 'AegirHostmaster') }}</a> <br>
         [<a href="{{ path('remove_servers', {'id': id}) }}">{{ 'server.remove.link'|trans({}, 'AegirHostmaster') }}</a>]
