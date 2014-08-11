@@ -16,6 +16,7 @@ class ServerType extends AbstractType
 
     $builder->add('ip_addresses', 'textarea', array(
       'description' => 'A list of IP addresses this server is publicly available under, one per line. If none is specified, a DNS lookup will be performed based on the server hostname above. <br /><strong>This should point to the public network, if you have such a separation.</strong>',
+      'required' => FALSE,
     ));
   }
 
