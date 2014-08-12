@@ -43,6 +43,7 @@ environment:
     singular: environment
   new:
     link: create new environment
+    headline: Create new environment
 
 api:
   doc:
