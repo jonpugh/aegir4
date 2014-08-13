@@ -2,9 +2,24 @@
 
 namespace Aegir\Provision\Model;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="project")
+ */
 class Project {
 
   /**
+   * @ORM\Column(type="integer")
+   * @ORM\Id
+   * @ORM\GeneratedValue(strategy="AUTO")
+   * @var integer
+   */
+  protected $id;
+
+  /**
+   * @ORM\Column(type="string", length=100)
    * @var string
    * Must be unique within Aegir.
    */
@@ -12,6 +27,7 @@ class Project {
 
   /**
    * @var string
+   * @ORM\Column(type="string", length=255)
    * Git repo URL, Makefile URL, or Composer.json URL?
    */
   public $source_url;
