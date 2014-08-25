@@ -1,0 +1,18 @@
+Aegir\Hostmaster\Entity\ServiceAsset:
+    type: entity
+    table: null
+    repositoryClass: Aegir\Hostmaster\Entity\ServiceAssetRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        service:
+            type: integer
+        environment:
+            type: integer
+        data:
+            type: json_array
+    lifecycleCallbacks: {  }

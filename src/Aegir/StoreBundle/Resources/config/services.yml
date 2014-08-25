@@ -1,0 +1,7 @@
+parameters:
+#    aegir_store.example.class: Aegir\StoreBundle\Example
+
+services:
+#    aegir_store.example:
+#        class: %aegir_store.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
