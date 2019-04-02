@@ -40,7 +40,7 @@ class Project {
   /**
    * Initiate the project
    */
-  public function __construct($name, $source_url) {
+  public function __construct($name = '', $source_url = '') {
     $this->name = $name;
     $this->source_url = $source_url;
 
