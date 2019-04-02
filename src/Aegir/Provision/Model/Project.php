@@ -16,7 +16,7 @@ class Project {
    * @ORM\GeneratedValue(strategy="AUTO")
    * @var integer
    */
-  protected $id;
+  public $id;
 
   /**
    * @ORM\Column(type="string", length=100)
