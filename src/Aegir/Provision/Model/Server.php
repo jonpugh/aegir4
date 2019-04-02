@@ -34,7 +34,7 @@ class Server {
    *
    * The first time this is initiated
    */
-  public function __construct($hostname, $ip_addresses = '', $services = array()) {
+  public function __construct($hostname = '', $ip_addresses = '', $services = array()) {
     $this->hostname = $hostname;
 
 
